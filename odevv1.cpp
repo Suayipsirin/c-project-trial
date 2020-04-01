@@ -1,61 +1,47 @@
 #include <iostream>
-using namespace std; //komut satırından sayı al bu sayıya kadar olan tamsayıları bastır.
+using namespace std; //komut satÃ½rÃ½ndan sayÃ½ al bu sayÃ½ya kadar olan tamsayÃ½larÃ½ bastÃ½r.
+
+void ciftler(int target) {
+  int toplam = 0;
+  for(int i=0;i<=abs(target);i++) {
+    if (i % 2 == 0) {
+      toplam += i;
+    }
+  }
+  // negatiflerle ugrasmaya gerek yok cunku simetrigi olacak
+  // atiyorum 5 verirse 9, -5 verirse -9 olacak
+  // o yuzden illa yapmak istiyorsan ==> toplam*(target/abs(target))
+  int sonuc = toplam*(target/abs(target));
+  cout << target << " e kadar olan cift tamsayilarin toplami: " << sonuc << endl;
+}
+
+void tekler(int target) {
+  int toplam = 0;
+  for(int i=0;i<=target;i++) {
+    if (i % 2 != 0) {
+      toplam += i;
+    }
+  }
+  // burayi da sen yap ornegin negatif sayilar icin.
+  // bu comment'i sil, yerine yukaridaki gibi negatifleri handle edecek
+  // kodu yaz sonra commit push
+  cout << target << " e kadar olan tek tamsayilarin toplami: " << toplam << endl;
+}
+
 int main(){
 
-setlocale(LC_ALL,"Turkish"); //türkçe karakter
-int toplam;
-int i;
-int a;
-cout <<"bir sayı giriniz: " << endl;
-cin >> a;
+  //setlocale(LC_ALL,"Turkish"); //tÃ¼rkÃ§e karakter
+  // tÃ¼rkÃ§e karakterle uÄŸraÅŸmayalÄ±m gerek yok
+  int toplam;
+  int i;
+  int a;
+  cout <<" bir sayi giriniz: " << endl;
+  cin >> a;
 
-if(a >= 0){
-if(a%2 == 0){
-cout << a << " e kadar olan cift tamsayıların toplamı: " << endl;
-for( i=0; i<=a; i+=2)
-{
-	
-	toplam +=i;
-	cout << toplam << endl;
-}
-}
-else if (a%2 != 0){
-	cout << a << " e kadar olan tek tamsayıların toplamı: " << endl;
-	for(i=1; i<=a; i+=2)
-	{
-	toplam +=i;
-	cout << toplam << endl;
-	}
-	
-}
-}
-else if(a < 0){
-	if(a%2 == 0){
-		cout << a << " e kadar olan cift tamsayıların toplamı: " << endl;
-		for( i=0; i >= a; i-=2)
-	{
-		toplam +=i;
-		cout << toplam << endl;
-	}
-}
+  ciftler(a);
+  tekler(a);
 
-else if(a%2 != 0){
-	cout << a << " e kadar olan tek tamsayıların toplamı: " << endl;
-	for(i=-1; i >= a; i-=2)
-	{
-		toplam +=i;
-		cout << toplam << endl;
-	}
-}
-}
-
-
-
-
-
-
-
-return 0;
+  return 0;
 }
 	
 
