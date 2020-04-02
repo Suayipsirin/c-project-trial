@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 using namespace std; //komut satýrýndan sayý al bu sayýya kadar olan tamsayýlarý bastýr.
 
 void ciftler(int target) {
@@ -17,7 +18,7 @@ void ciftler(int target) {
 
 void tekler(int target) {
   int toplam = 0;
-  for(int i=0;i<=target;i++) {
+  for(int i=0;i>=(target);i--) {
     if (i % 2 != 0) {
       toplam += i;
     }
