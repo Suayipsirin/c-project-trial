@@ -18,14 +18,17 @@ void ciftler(int target) {
 
 void tekler(int target) {
   int toplam = 0;
-  for(int i=0;i>=(target);i--) {
+  for(int i=0;i<=abs(target);i++) {
     if (i % 2 != 0) {
       toplam += i;
     }
   }
+
+
   // burayi da sen yap ornegin negatif sayilar icin.
   // bu comment'i sil, yerine yukaridaki gibi negatifleri handle edecek
   // kodu yaz sonra commit push
+   int sonuc = toplam*(target/abs(target));
   cout << target << " e kadar olan tek tamsayilarin toplami: " << toplam << endl;
 }
 
@@ -41,7 +44,7 @@ int main(){
 
   ciftler(a);
   tekler(a);
-
+  
   return 0;
 }
 	
