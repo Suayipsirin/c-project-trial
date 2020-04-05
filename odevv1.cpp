@@ -1,6 +1,6 @@
 #include <iostream>
 #include <math.h>
-using namespace std; //komut satýrýndan sayý al bu sayýya kadar olan tamsayýlarý bastýr.
+using namespace std; //komut satirindan sayi al bu sayiiya kadar olan tamsayilari bastir.
 
 void ciftler(int target) {
   int toplam = 0;
@@ -9,9 +9,7 @@ void ciftler(int target) {
       toplam += i;
     }
   }
-  // negatiflerle ugrasmaya gerek yok cunku simetrigi olacak
-  // atiyorum 5 verirse 9, -5 verirse -9 olacak
-  // o yuzden illa yapmak istiyorsan ==> toplam*(target/abs(target))
+  
   int sonuc = toplam*(target/abs(target));
   cout << target << " e kadar olan cift tamsayilarin toplami: " << sonuc << endl;
 }
@@ -25,17 +23,14 @@ void tekler(int target) {
   }
 
 
-  // burayi da sen yap ornegin negatif sayilar icin.
-  // bu comment'i sil, yerine yukaridaki gibi negatifleri handle edecek
-  // kodu yaz sonra commit push
+  
    int sonuc = toplam*(target/abs(target));
-  cout << target << " e kadar olan tek tamsayilarin toplami: " << toplam << endl;
+  cout << target << " e kadar olan tek tamsayilarin toplami: " << sonuc << endl;
 }
 
 int main(){
 
-  //setlocale(LC_ALL,"Turkish"); //türkçe karakter
-  // türkçe karakterle uğraşmayalım gerek yok
+ 
   int toplam;
   int i;
   int a;
