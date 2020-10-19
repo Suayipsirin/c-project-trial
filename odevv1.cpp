@@ -13,7 +13,7 @@ int  mutlak(int sayi) {
 void ciftler(int target) {
   int toplam = 0;
   for(int i=0;i<= mutlak(target);i++) {
-    if (i % 2 == 0) {
+    if(isEven(i)) {
       toplam += i;
     }
   }
@@ -25,13 +25,40 @@ void ciftler(int target) {
 void tekler(int target) {
   int toplam = 0;
   for(int i=0;i<= mutlak(target);i++) {
-    if (i % 2 != 0) {
+    if(isOdd(i)) {
       toplam += i;
     }
   }
    int sonuc = toplam*(target/ mutlak(target));
   cout << target << " e kadar olan tek tamsayilarin toplami: " << sonuc << endl;
 }
+
+bool isEven(int i) {
+  bool even = true;
+}
+int main()
+{
+	int number;
+	while(number>=0){
+		number=number-2;
+	}
+	   return 0;
+}
+
+bool isOdd(int i){
+	bool odd = true;
+	
+}
+int main()
+{
+	int number;
+	while(number>=0){
+		number=number-2;
+	}
+	return 0;
+}
+
+
 
 int main(){
 
@@ -47,6 +74,10 @@ int main(){
   
   return 0;
 }
+
+
+
+
 	
 
 
